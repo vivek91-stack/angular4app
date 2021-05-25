@@ -1,3 +1,219 @@
-<h1>
-  {{title}}
-</h1>
+<h1 [ngStyle]="{'color':'#cc0000','font-style':'italic','text-align':'center'}">Welcome To Angular4-App Demo</h1>
+
+<!-- Data Binding Example -->
+<!-- <input [(ngModel)]="title">
+<h1>{{title}}</h1>
+<hr>
+<button (click)="btnclick()">Click Me!</button>
+<hr> -->
+<!-- ngIf Example -->
+<!-- <h1 *ngIf="chk">This is ngIf Example</h1>
+<hr> -->
+<!-- Radio Button Example using ngIf else -->
+<!-- <div>
+    <input type="radio" name="radio" (click)="changevalue(true)">Male
+    <input type="radio" name="radio" (click)="changevalue(false)">Female
+</div>
+<div *ngIf="isvalid ; else elseblock">
+    <p [ngStyle]="{'color':'blue'}">You Selected Male</p>
+</div>
+<ng-template #elseblock>
+    <div>
+        <p [ngStyle]="{'color':'red'}">You Selected Female</p>
+    </div>
+</ng-template>
+<hr> -->
+<!-- New Service Example -->
+<!-- <h2>{{text}}</h2>
+<hr> -->
+
+<!-- Dependancy Injection Example -->
+<!-- <table>
+    <tr *ngFor='let em of emp'>
+        <td><b>Emp Code:#</b></td>{{em.empcode}}
+        <td><b> Name:</b></td>{{em.empname}}
+    </tr>
+</table>
+
+<h1>{{title1}}</h1>
+
+<ul>
+    <li *ngFor='let frnd of myfriend'>
+        {{frnd}}
+    </li>
+</ul>
+
+<h2>My favorite hero is: {{myHero2.name}}</h2>
+<p>Heroes:</p>
+<p *ngIf="heroes.length > 5">There are many heroes!</p>
+<ul>
+    <li *ngFor="let hero of heroes">
+        {{ hero.id }}
+        {{ hero.name }}
+    </li>
+</ul> -->
+
+<!-- "The sum of 1 + 1 is 2" -->
+<!-- <p>The sum of 1 + 1 is {{1 + 1}}</p>
+
+
+<hr> -->
+<!-- One way data binding through Interpolation  -->
+<!-- <h1>One way data binding through Interpolation</h1><br>
+<h4>{{ StudentName+" "+StudentNo}}</h4>
+<hr> -->
+<!--One way data binding through property  -->
+<!-- <h1>One way data binding through property</h1>
+<div>
+    <h1 [innerHTML]="SelfName"></h1>
+    <img [src]="'src/app/angular.jpg'" [height]="300">
+</div>
+<hr> -->
+<!-- One way data binding through attribute -->
+<!-- <h1>One way data binding through attribute</h1>
+<table [attr.border]="bdr" [attr.height]='h' [attr.width]='w'>
+    <tr>
+        <td [attr.colspan]="colspn">Employee Details</td>
+    </tr>
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>ID</b></td>
+        <td><b>Salary</b></td>
+    </tr>
+    <tr>
+        <td>Vivek</td>
+        <td>001</td>
+        <td>45000</td>
+    </tr>
+</table>
+<hr> -->
+
+
+<!-- One way data binding through event (view to component-source) -->
+<!-- <h1>One way data binding through event</h1>
+<button (click)="OnClick()">Press Me!</button>
+<hr> -->
+
+
+<!-- Two way data binding without [(ngModel)] directive -->
+<!-- <h1>Two way data binding with & without [(ngModel)]</h1>
+Enter Your Name:<input [value]='fname' (input)='fname=$event.target.value'><br><br> -->
+
+
+<!-- Two way data binding with [(ngModel)] directive  -->
+<!-- Enter Your Last Name:<input [(ngModel)]="lname"><br><br>
+
+
+Your Full Name Is {{fname}} {{lname}}
+<hr> -->
+<!-- InBuilt Pipes -->
+<!-- <h1>InBuilt Pipes </h1>
+<table border="5">
+    <tr>
+        <th>Player Name</th>
+        <th>Player Code</th>
+        <th>Player Runs</th>
+        <th>Player Sixes</th>
+        <th>Player Team</th>
+    </tr>
+    <tr *ngFor=" let plyr of players">
+        <td>{{plyr.name}}</td>
+        <td>{{plyr.code}}</td>
+        <td>{{plyr.runs}}</td>
+        <td>{{plyr.sixes}}</td>
+        <td>{{plyr.team|uppercase}}</td>
+    </tr>
+</table><br><br> -->
+
+<!--Datepipe  -->
+<!-- <h2>Example Of Datepipe</h2>
+<p>medium : {{todate | date:'medium'}} </p>
+<p>short : {{todate | date:'short'}} </p>
+<p>fullDate : {{todate | date:'fullDate'}} </p>
+<p>longDate : {{todate | date:'longDate'}} </p>
+<p>mediumDate : {{todate | date:'mediumDate'}} </p>
+<p>shortDate : {{todate | date:'shortDate'}} </p>
+<p>mediumTime : {{todate | date:'mediumTime'}} </p>
+<p>dd-MM-y : {{todate | date:'dd-MM-y'}} </p>
+<p>dd-MM-yy HH:mm : {{todate | date:'dd-MM-yy HH:mm'}} </p> -->
+
+<!-- UpperCasePipe & LowerCasePipe -->
+<!-- <h2>UpperCasePipe & LowerCasePipe</h2>
+<p>Unformatted :{{txt1}} {{txt2}} </p>
+<p>Uppercase :{{txt1 | uppercase}} </p>
+<p>Lowercase :{{txt2 | lowercase}} -->
+
+    <!-- SlicePipe -->
+<!-- <h2>SlicePipe</h2>
+<p>{{txt1|slice:0:7}}</p>
+<p>{{txt1|slice:-7}}</p> -->
+
+<!--  DecimalPipe / NumberPipe -->
+<!-- <h2>DecimalPipe / NumberPipe</h2>
+<p> Unformatted :{{num}}</p>
+<p> Formatted :{{num | number}}</p>
+<p> Formatted :{{num | number:'4.1-2'}}</p>
+<p> Formatted :{{num | number:'7.1-5'}} </p> -->
+
+<!--  PercentPipe -->
+<!-- <h2>PercentPipe</h2>
+<p>Unformatted :{{per}} </p>
+<p>Example 1 :{{per | percent }} </p>
+<p>Example 2 :{{per | percent:'1.2-2'}} </p> -->
+
+<!--  CurrencyPipe -->
+<!-- <h2>CurrencyPipe</h2>
+<p>Unformatted :{{cur}} </p>
+<p>Example 1 :{{cur | currency }} </p>
+<p>Example 2 :{{cur | currency:'INR':true:'4.2-2'}} </p> -->
+
+<!-- CustomePipe -->
+<!-- <h2>CustomePipe</h2>
+<table border='1'>
+    <tr *ngFor='let stud of students'>
+        <td>{{stud.RNo}}</td>
+        <td>{{stud.Name|mypipe:stud.gender}}</td>
+        <td>{{stud.Std}}</td>
+    </tr>
+</table> -->
+
+<!-- Temprature Converter -->
+<!-- <h2> Temprature Converter Using Custome Pipes</h2>
+<div class='card'>
+    <div class='card-header'>
+      <p>{{title}} </p>
+    </div>
+    <div class="card-body">
+   
+      <div class="row">
+        <h3>Fahrenheit to Celsius </h3>
+      </div>
+      <div class="row">
+        <p> Fahrenheit : <input type="text" [(ngModel)]="Fahrenheit" /> 
+        Celsius : {{Fahrenheit | tempConverter:'C'}} </p>
+      </div>
+   
+      <div class="row">
+        <h3>Celsius to Fahrenheit </h3>
+      </div>
+      <div class="row">
+        <p class=""> celsius : <input type="text" [(ngModel)]="celcius" /> 
+         Fahrenheit : {{celcius | tempConverter:'F'}} </p>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-lg">Check Bootstrap</button> -->
+
+<!-- app.component.html  -->
+
+<div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!!
+    </h1>
+    <nav>
+      <a routerLink="home" routerLinkActive="active">Home</a>
+      <a routerLink="about">About</a>
+      <a routerLink="dashboard">Dashboard</a>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>  

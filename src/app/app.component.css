@@ -1,0 +1,16 @@
+
+ul li{
+    list-style-type: none;
+    
+    margin-bottom: 10px;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 10%;
+    text-align: center;
+}
+ul li:hover{
+    background-color: turquoise;
+    transition: 1s;
+}
